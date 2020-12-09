@@ -1,0 +1,20 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: perceptilabs-pvc
+spec:
+  #storageClassName: perceptilabs-example-sc
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+---
+apiVersion: perceptilabs.com/v1
+kind: PerceptiLabs
+metadata:
+  name: example-perceptilabs
+spec:
+  corePvc: perceptilabs-pvc
+  ryggPvc: perceptilabs-pvc
