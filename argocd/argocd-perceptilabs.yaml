@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/lavlas/gitops-examples.git
-    targetRevision: HEAD
+    targetRevision: perceptilabs
     path: components/perceptilabs
   destination:
     server: https://kubernetes.default.svc
